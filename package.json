@@ -1,0 +1,33 @@
+{
+  "name": "@besthqs/be-tools",
+  "private": false,
+  "version": "0.0.2",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview",
+    "test": "node --test"
+  },
+  "file": [
+    "dist"
+  ],
+  "main": "./dist/test-btn.umd.js",
+  "module": "./dist/test-btn.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/test-btn.es.js",
+      "require": "./dist/test-btn.umd.js"
+    }
+  },
+  "dependencies": {
+    "vue": "^3.5.10"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.6",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.8",
+    "vue-tsc": "^2.1.6"
+  }
+}
